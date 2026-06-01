@@ -27,6 +27,7 @@ def create_task():
         "done": False
     }
     tasks.append(task)
+    print(f"Task created: {task['title']}")
     with open("tasks.json", "w") as f:
         json.dump(tasks, f)
     return jsonify(task), 201
